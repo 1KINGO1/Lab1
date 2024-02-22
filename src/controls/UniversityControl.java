@@ -23,6 +23,8 @@ public class UniversityControl extends Control {
             showInstructions();
             char command = requestCommand();
 
+            System.out.println(" ");
+
             switch (command) {
                 case '1':
                     showFaculties();
@@ -38,21 +40,20 @@ public class UniversityControl extends Control {
                 default:
                     System.out.println("Unknown command: " + command);
             }
+
+            System.out.println(" ");
         }
     }
 
 
     private void showFaculties() {
-        System.out.println(" ");
         System.out.println("== Faculties ==");
         for (Faculty faculty : faculties) {
             System.out.println(faculty);
         }
-        System.out.println(" ");
     }
 
     private void selectFacultyByName() {
-        System.out.println(" ");
         System.out.println("== Find faculty by name ==");
         String name = requestString("faculty name");
         name = name.toLowerCase();
@@ -63,12 +64,9 @@ public class UniversityControl extends Control {
                 break;
             }
         }
-        System.out.println(" ");
     }
 
     private void createFaculty() {
-
-        System.out.println(" ");
         System.out.println("== Create new faculty ==");
 
         while (true) {
@@ -89,8 +87,6 @@ public class UniversityControl extends Control {
             }
 
         }
-
-        System.out.println(" ");
     }
 
 }
