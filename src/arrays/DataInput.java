@@ -19,17 +19,16 @@ public final class DataInput {
 
     public static Integer getInt(){
         String s = "";
-        Integer value;
+        Integer value = 0;
         while (true) {
             try {
                 s = getString();
                 value = Integer.valueOf(s);
                 break;
             } catch (NumberFormatException e) {
-                System.out.println("Wrong input. Try again.");
+                return 0;
             } catch (IOException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
+                return 0;
             }
         }
         return value;
